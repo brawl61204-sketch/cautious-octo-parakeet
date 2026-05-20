@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Волков Артём ИС-25">
+    <meta name="description" content="Лабораторная работа №8 — Форма добавления автомобилей">
+    <title>АвтоБлог — Добавить автомобиль</title>
+
+    <link rel="stylesheet" href="style_f/structuref.css">
+    <link rel="stylesheet" href="style_f/typographyf.css">
+    <link rel="stylesheet" href="style_f/images.css">
+    <link rel="stylesheet" href="style_f/menuf.css">
+
+    <style>
+        /* Стили только для формы */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.55);
+            border: 0.08rem solid #d5e1e5;
+            border-radius: 0.35rem;
+            padding: 1.5rem;
+        }
+        form {
+            max-width: 100%;
+        }
+        fieldset {
+            border: 0.08rem solid #d5e1e5;
+            border-radius: 0.35rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem 1.5rem;
+        }
+        legend {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.2rem;
+            color: #3d474b;
+            padding: 0 0.5rem;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+            clear: both;
+            overflow: hidden;
+        }
+        .form-group label {
+            display: block;
+            float: left;
+            width: 180px;
+            font-weight: bold;
+            color: #4b565a;
+            padding-top: 0.5rem;
+        }
+        .form-group input,
+        .form-group select {
+            float: left;
+            width: 250px;
+            padding: 0.5rem;
+            border: 0.08rem solid #c4cfd3;
+            background-color: #ffffff;
+            border-radius: 0.25rem;
+        }
+        .form-group input[type="range"] {
+            width: 200px;
+        }
+        .form-group input[type="color"] {
+            width: 60px;
+            height: 38px;
+        }
+        .form-group span {
+            float: left;
+            padding-top: 0.5rem;
+            margin-left: 0.5rem;
+        }
+        .form-group input[type="file"] {
+            padding-top: 0.3rem;
+        }
+        .form-buttons {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        /* ЖЁЛТАЯ КНОПКА — как в шапке сайта */
+        .form-buttons button[type="submit"] {
+            padding: 0.6rem 1.8rem;
+            margin: 0 0.5rem;
+            font-size: 1rem;
+            background-color: #FFD700;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            border: 0.15rem solid #777;
+            border-radius: 0.35rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .form-buttons button[type="submit"]:hover {
+            background-color: #e6c200;
+            opacity: 0.9;
+        }
+        /* Кнопка Сбросить — серая */
+        .form-buttons button[type="reset"] {
+            padding: 0.6rem 1.8rem;
+            margin: 0 0.5rem;
+            font-size: 1rem;
+            background-color: #7f8c8d;
+            color: white;
+            border: 0.15rem solid #777;
+            border-radius: 0.35rem;
+            cursor: pointer;
+        }
+        .form-buttons button[type="reset"]:hover {
+            background-color: #6c7a7c;
+        }
+        hr {
+            border: none;
+            border-top: 0.08rem solid #d5e1e5;
+            margin: 1rem 0;
+        }
+        @media (max-width: 700px) {
+            .form-group label,
+            .form-group input,
+            .form-group select {
+                float: none;
+                display: block;
+                width: 100%;
+            }
+            .form-group label {
+                margin-bottom: 0.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-page">
+
+    <header class="site-header">
+        <h1>АвтоБлог</h1>
+        <form class="header-search" action="#" method="get">
+            <input type="search" name="search" placeholder="Что ищем?">
+            <button type="submit">ДА!</button>
+        </form>
+    </header>
+
+    <nav class="top-menu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="article.html">Пример страницы</a></li>
+            <li><a href="form_cars.html" class="active">Добавить авто</a></li>
+        </ul>
+    </nav>
+
+    <main class="site-main">
+        <div class="form-container">
+            <h2 style="margin-bottom: 1rem; color: #3d474b;">➕ Добавление информации об автомобиле</h2>
+            <hr>
+
+            <form action="#" method="post" enctype="multipart/form-data">
+
+                <!-- ========== ОСНОВНАЯ ИНФОРМАЦИЯ ========== -->
+                <fieldset>
+                    <legend>📌 Основная информация</legend>
+
+                    <div class="form-group">
+                        <label>Производитель:</label>
+                        <select name="manufacturer" required>
+                            <option value="">Выберите...</option>
+                            <option>BMW</option>
+                            <option>Tesla</option>
+                            <option>Audi</option>
+                            <option>Mercedes-Benz</option>
+                            <option>Toyota</option>
+                            <option>Volkswagen</option>
+                            <option>Lada</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Марка:</label>
+                        <input type="text" name="brand" placeholder="Например: M5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Тип двигателя:</label>
+                        <input type="text" name="engine" placeholder="Бензин / Дизель / Электро / Гибрид">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Год производства:</label>
+                        <input type="number" name="year" min="1950" max="2025" value="2020" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Тип кузова:</label>
+                        <select name="bodytype">
+                            <option>Седан</option>
+                            <option>Хэтчбек</option>
+                            <option>Универсал</option>
+                            <option>Купе</option>
+                            <option>Кабриолет</option>
+                            <option>Внедорожник</option>
+                            <option>Минивэн</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Фотография:</label>
+                        <input type="file" name="photo" accept="image/*">
+                    </div>
+                </fieldset>
+
+                <!-- ========== HTML5 ЭЛЕМЕНТЫ ========== -->
+                <fieldset>
+                    <legend>🎯 HTML5 элементы</legend>
+
+                    <div class="form-group">
+                        <label>Email владельца:</label>
+                        <input type="email" name="email" placeholder="example@mail.ru">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Сайт авто:</label>
+                        <input type="url" name="website" placeholder="https://bmw.ru">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Телефон:</label>
+                        <input type="tel" name="phone" placeholder="+7 (123) 456-78-90">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Поиск по авто:</label>
+                        <input type="search" name="search_auto" placeholder="BMW, Tesla...">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Мощность (л.с.):</label>
+                        <input type="range" name="power" min="50" max="800" step="10" value="150" oninput="document.getElementById('power_val').innerText=this.value">
+                        <span id="power_val">150</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Количество дверей:</label>
+                        <input type="number" name="doors" min="2" max="5" value="4">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Дата покупки:</label>
+                        <input type="date" name="purchase_date">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Время тест-драйва:</label>
+                        <input type="time" name="test_drive_time">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Дата и время осмотра:</label>
+                        <input type="datetime-local" name="inspection_datetime">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Месяц выпуска:</label>
+                        <input type="month" name="release_month">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Цвет авто:</label>
+                        <input type="color" name="color" value="#3366cc">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Тип топлива:</label>
+                        <input list="fuel_list" name="fuel" placeholder="Выберите или введите">
+                        <datalist id="fuel_list">
+                            <option>АИ-92</option>
+                            <option>АИ-95</option>
+                            <option>АИ-98</option>
+                            <option>Дизель</option>
+                            <option>Электричество</option>
+                            <option>Газ</option>
+                            <option>Водород</option>
+                        </datalist>
+                    </div>
+                </fieldset>
+
+                <!-- ========== КНОПКИ ========== -->
+                <div class="form-buttons">
+                    <button type="submit">✅ Отправить</button>
+                    <button type="reset">❌ Сбросить</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 АвтоБлог — Лабораторная работа №8 | Формы HTML</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

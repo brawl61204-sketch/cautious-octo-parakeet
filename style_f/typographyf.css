@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #4b565a;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+.site-header h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.post h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #3d474b;
+    margin-bottom: 0.7rem;
+}
+
+.post-header p,
+.post-footer p {
+    font-size: 0.85rem;
+    color: #7a8589;
+}
+
+.post-body p {
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.side-box h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: #3d474b;
+    margin-bottom: 0.8rem;
+}
+
+.side-box li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.site-footer {
+    text-align: center;
+    color: #697579;
+    font-size: 0.9rem;
+}

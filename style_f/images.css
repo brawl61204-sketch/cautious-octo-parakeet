@@ -1,0 +1,68 @@
+body {
+    background-color: #cfe5ea;
+    background-image: url("../images/bg.jpg");
+    background-repeat: repeat;
+}
+
+.main-page {
+    background-color: rgba(240, 250, 252, 0.8);
+}
+
+.site-header {
+    background-image: url("../images/header-bg.jpg");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+}
+
+.top-menu {
+    background-color: rgba(255, 255, 255, 0.55);
+    border-top: 0.08rem solid #d7e4e8;
+    border-bottom: 0.08rem solid #d7e4e8;
+}
+
+.site-main {
+    background-image: url("../images/content-bg.jpg");
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+}
+
+.post,
+.search-box,
+.side-box {
+    background-color: rgba(255, 255, 255, 0.55);
+    border: 0.08rem solid #d5e1e5;
+    border-radius: 0.35rem;
+}
+
+.post-header,
+.post-footer {
+    border-bottom: 0.08rem solid #d8e2e5;
+}
+
+.post-footer {
+    border-top: 0.08rem solid #d8e2e5;
+    border-bottom: none;
+}
+
+.site-footer {
+    background-image: url("../images/footer-bg.jpg");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+}
+
+button {
+    background-color:#FFD700;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 0.15rem solid #777;
+    
+}
+
+input {
+    border: 0.08rem solid #c4cfd3;
+    background-color: #ffffff;
+}
+
+.post-body img {
+    border: 0.08rem solid #d5e1e5;
+}

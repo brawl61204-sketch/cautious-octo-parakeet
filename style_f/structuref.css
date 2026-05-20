@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.main-page {
+    width: 82%;
+    max-width: 72rem;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.site-header {
+    width: 100%;
+    min-height: 4.5rem;
+    padding: 1rem 1.5rem;
+    overflow: hidden;
+}
+
+.site-header h1 {
+    float: left;
+}
+
+.header-search {
+    float: right;
+    width: 32%;
+    margin-top: 0.3rem;
+}
+
+.header-search input {
+    width: 75%;
+}
+
+.header-search button {
+    width: 20%;
+}
+
+.top-menu {
+    width: 100%;
+    min-height: 2.3rem;
+}
+
+.site-main {
+    width: 100%;
+    overflow: hidden;
+    padding: 1.5rem;
+}
+
+.content {
+    float: left;
+    width: 68%;
+}
+
+.side-bar {
+    float: right;
+    width: 28%;
+}
+
+.post {
+    width: 100%;
+    padding: 1.2rem;
+}
+
+.post-header {
+    margin-bottom: 1rem;
+}
+
+.post-body img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.post-body p {
+    margin-bottom: 1rem;
+}
+
+.post-footer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.search-box,
+.side-box {
+    width: 100%;
+    padding: 1rem;
+}
+
+.search-box input {
+    width: 65%;
+}
+
+.search-box button {
+    width: 25%;
+}
+
+.site-footer {
+    clear: both;
+    width: 100%;
+    min-height: 3rem;
+    padding: 1rem;
+}
+
+@media (max-width: 800px) {
+    .main-page {
+        width: 96%;
+    }
+
+    .content,
+    .side-bar {
+        float: none;
+        width: 100%;
+    }
+
+    .side-bar {
+        margin-top: 1rem;
+    }
+
+    .header-search {
+        float: none;
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
